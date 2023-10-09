@@ -1,0 +1,22 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Triangolo {
+ private int a
+ private int b
+ private int c
+ private boolean equilatero
+ private boolean isoscelte
+ private boolean scaleno
+
+ {method} public void setA
+ {method} public void setB
+ {method} public void setC
+ {method} public int perimetro
+ {method} public int getType
+ {method} public int area
+ {method} public String toString
+ {method} private findBase 
+}
+@enduml
+
+https://www.plantuml.com/plantuml/uml/TSz1RW8n38NXVKxX8_G8G5TTmmKy6NTgrMEdjeFK8kvUr4eW5DZbVrystaIYPr-bn2ThGySLgc34DjDvwablrNJFFmGlvG_Wu8owc1YS2ZJd8oO1QmBUvtIVzPQJcH0gq5TdkGnket5OL9AaaQAYa5efS5efFsm-G-kJS8MZyGn1kNrEk-VqEX9hGYFdo-psc1VAmtUZnuXEECe-dNM1jF_7xSFrr7VMUOT1KCvbGphtLNu1
