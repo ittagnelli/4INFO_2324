@@ -80,9 +80,9 @@ public class Triangolo {
         return (int)Math.sqrt((P-a)*(P-b)*(P-c));
     }
 
-    public void PrintAll(){
+    public String toString(){
         int IntType = GetType();
         String StrType = IntType == 0 ? "equilatero" : IntType == 1 ? "isoscele" : "scaleno";
-        System.out.println("Il triangolo è: " + StrType + "\nIl perimetro vale: " + Perimetro() + "\nL'area vale: " + Area());
+        return "Il triangolo è: " + StrType + "\nIl perimetro vale: " + Perimetro() + "\nL'area vale: " + Area();
     }
 }
