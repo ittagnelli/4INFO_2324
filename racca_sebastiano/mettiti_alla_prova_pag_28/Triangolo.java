@@ -69,6 +69,12 @@ public class Triangolo {
     }
 
     public String toString() {
-        return "Lato 1: " + lati[0] + "\nLato 2: ";
+        System.out.println("CIAO SONO IL METODO toString");
+        return "Lato 1: " + lati[0] + "\nLato 2: " + lati[1] + "\nLato 3: " + lati[2];
+    }
+
+     public String stampa() {
+        System.out.println("CIAO SONO IL METODO stampa");
+        return "Lato 1: " + lati[0] + "\nLato 2: " + lati[1] + "\nLato 3: " + lati[2];
     }
 }

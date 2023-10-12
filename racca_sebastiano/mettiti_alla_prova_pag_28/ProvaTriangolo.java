@@ -27,5 +27,9 @@ public class ProvaTriangolo {
         System.out.println("Tipo di triangolo: " + scaleno.getTipo());
         System.out.println("Area: " + scaleno.getArea());
         System.out.println("Perimetro: " + scaleno.getPerimetro());
+
+        System.out.println(scaleno);
+
+        System.out.println(scaleno.stampa());
     }
 }
