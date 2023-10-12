@@ -7,20 +7,22 @@ public class CalcoloStringa {
     public CalcoloStringa(String string) {
         str = string;
     
-        charCounter = new int[256];
+        charCounter = new int[53];
         vocali = 0;
         consonanti = 0;
     
         for (int i = 0; i < str.length(); i++) {
             char current = str.charAt(i);
-            charCounter[(int) current]++;
 
             if(isVocale(current)) {
                 vocali++;
             } else if(isConsonante(current)){
                 consonanti++;
+            } else {
+                continue;
             }
 
+            charCounter[((int) current) - ((int) 'A')]++;
         }
 
     }
@@ -52,7 +54,7 @@ public class CalcoloStringa {
 
         for (int i = 0; i < charCounter.length; i++) {
             if(charCounter[i] != 0) {
-                ret = ret.concat("\n" + (char)i + ": " + charCounter[i]);
+                ret = ret.concat("\n" + (char)(i + ((int) 'A')) + ": " + charCounter[i]);
             }
         }
 
