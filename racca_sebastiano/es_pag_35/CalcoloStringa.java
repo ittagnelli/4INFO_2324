@@ -12,21 +12,26 @@ public class CalcoloStringa {
         consonanti = 0;
     
         for (int i = 0; i < str.length(); i++) {
-            charCounter[(int) str.charAt(i)]++;
+            char current = str.charAt(i);
+            charCounter[(int) current]++;
 
-            if(isVocale(str.charAt(i))) {
+            if(isVocale(current)) {
                 vocali++;
-            } else {
+            } else if(isConsonante(current)){
                 consonanti++;
             }
+
         }
 
     }
 
 
     private boolean isVocale(char c) {
-        char lowercaseChar = Character.toLowerCase(c);
-        return lowercaseChar == 'a' || lowercaseChar == 'e' || lowercaseChar == 'i' || lowercaseChar == 'o' || lowercaseChar == 'u';
+        return "aeiou".indexOf(Character.toLowerCase(c)) >= 0;
+    }
+
+    private boolean isConsonante(char c) {
+        return "bcdfghjklmnpqrstvwxyz".indexOf(Character.toLowerCase(c)) >= 0;
     }
 
     public int getVocali() {
