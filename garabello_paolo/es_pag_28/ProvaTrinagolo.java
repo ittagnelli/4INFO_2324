@@ -16,6 +16,6 @@ public class ProvaTrinagolo {
 
         Triangolo triangolo = new Triangolo(a, b, c);
 
-        triangolo.PrintAll();
+        System.out.println(triangolo);
     }    
 }
