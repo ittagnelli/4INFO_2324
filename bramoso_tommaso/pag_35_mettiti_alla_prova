@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class ContaLettere {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Inserisci una frase: ");
+        String frase = scanner.nextLine().toLowerCase();
+
+        int[] conteggioLettere = new int[26];
+        int conteggioConsonanti = 0;
+        int conteggioVocali = 0;
+
+        for (int i = 0; i < frase.length(); i++) {
+            char carattere = frase.charAt(i);
+            if (carattere >= 'a' && carattere <= 'z') {
+                int indice = carattere - 'a';
+                conteggioLettere[indice]++;
+                if (carattere == 'a' || carattere == 'e' || carattere == 'i' || carattere == 'o' || carattere == 'u') {
+                    conteggioVocali++;
+                } else {
+                    conteggioConsonanti++;
+                }
+            }
+        }
+
+        for (int i = 0; i < 26; i++) {
+            char lettera = (char) ('a' + i);
+            System.out.println("Lettera " + lettera + ": " + conteggioLettere[i]);
+        }
+        System.out.println("Consonanti: " + conteggioConsonanti);
+        System.out.println("Vocali: " + conteggioVocali);
+
+        scanner.close();
+    }
+}
