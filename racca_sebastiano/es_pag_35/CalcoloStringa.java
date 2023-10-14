@@ -7,26 +7,33 @@ public class CalcoloStringa {
     public CalcoloStringa(String string) {
         str = string;
     
-        charCounter = new int[256];
+        charCounter = new int[53];
         vocali = 0;
         consonanti = 0;
     
         for (int i = 0; i < str.length(); i++) {
-            charCounter[(int) str.charAt(i)]++;
+            char current = str.charAt(i);
 
-            if(isVocale(str.charAt(i))) {
+            if(isVocale(current)) {
                 vocali++;
-            } else {
+            } else if(isConsonante(current)){
                 consonanti++;
+            } else {
+                continue;
             }
+
+            charCounter[((int) current) - ((int) 'A')]++;
         }
 
     }
 
 
     private boolean isVocale(char c) {
-        char lowercaseChar = Character.toLowerCase(c);
-        return lowercaseChar == 'a' || lowercaseChar == 'e' || lowercaseChar == 'i' || lowercaseChar == 'o' || lowercaseChar == 'u';
+        return "aeiou".indexOf(Character.toLowerCase(c)) >= 0;
+    }
+
+    private boolean isConsonante(char c) {
+        return "bcdfghjklmnpqrstvwxyz".indexOf(Character.toLowerCase(c)) >= 0;
     }
 
     public int getVocali() {
@@ -47,7 +54,7 @@ public class CalcoloStringa {
 
         for (int i = 0; i < charCounter.length; i++) {
             if(charCounter[i] != 0) {
-                ret = ret.concat("\n" + (char)i + ": " + charCounter[i]);
+                ret = ret.concat("\n" + (char)(i + ((int) 'A')) + ": " + charCounter[i]);
             }
         }
 
