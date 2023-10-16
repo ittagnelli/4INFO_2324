@@ -1,0 +1,19 @@
+@startuml
+class Antenato1 {
+  - colorePelliccia : String
+  + pascola() : void
+  + rumina() : void
+  + getPelliccia() : String
+}
+
+class Antenato2 extends Antenato1{
+  + muggisci() : void
+}
+
+class Mucca extends Antenato2{
+  - lunghezzaCorna : int
+  + getCorna() : int
+}
+@enduml
+
+https://www.plantuml.com/plantuml/uml/ROwn2W8n38RtUugCYZXuezE9io3u1A5NQY1DfKr5xl3TZNKvr2ryF_-NVoYAMMlapZ6M0WTHBwXf1tC7i0MNE6L_zipa727iuQAP95YuWHiMot6rDdnFD3QOQoHPi6VtfUx1F-mQ5y_cremr12gE_dHFrJdywVMVZLmbNFqquJ5bUKyaqIOCNXioOOFc6qnG8xy0

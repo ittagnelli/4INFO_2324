@@ -1,0 +1,12 @@
+@startuml
+class Elettrodomestici{
+  - Acceso : Boolean
+  + AccendiSpegni : void
+}
+
+class Telefono extends Elettrodomestici {
+  + ricercaSuInternet() : void
+}
+@enduml
+
+https://www.plantuml.com/plantuml/uml/PSun2W9138NXVawHKX4lOBKA5jRh1ORCKmApYSnaHLYyks4HB6p_91yPkkVcyrGJrzmxdIlScnMRq5rObaIqfoCpkj61JcOLMIFkrgX5nWVkAZ5xcfJqJb_eYegRgH5U7cl_CYshqeJHE8_pHHrDuPljpnhYCdxx0000
