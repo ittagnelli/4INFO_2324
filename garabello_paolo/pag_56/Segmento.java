@@ -9,7 +9,7 @@ public class Segmento {
         this.lunghezza = lunghezza;
         this.estremoSx.setAll(estremoSx);;
         this.estremoDx.setAll(estremoSx);
-        estremoDx.setX(estremoSx.getX()+lunghezza);
+        estremoDx.setX(estremoSx.getX() + lunghezza);
     }
 
     public Segmento(int lunghezza){
