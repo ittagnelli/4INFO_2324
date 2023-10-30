@@ -1,0 +1,12 @@
+public class Pianoforte extends Tasti{
+    private String coda;
+
+    public void setCoda(String c) {
+        coda = c;
+    }
+    @Override
+    public void stampa() {
+        super.stampa();
+        System.out.println("Coda: " + coda);
+    }
+}
