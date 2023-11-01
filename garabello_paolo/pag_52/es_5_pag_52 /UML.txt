@@ -1,0 +1,25 @@
+@startuml
+class MezzoDiTrasporto {
+  - cavalli : int
+  - velocitàMax : int 
+  - acceso : boolean
+  + accendiSpegni() : void
+  + public getCavalli() : int
+  + setCavalli(int horsePower) : void
+  + setVelocitàMax(int velocità) : void
+  + getVelocitàMax() : int 
+}
+
+class cityCar extends MezzoDiTrasporto {
+   - modalitàRisparmio : boolean
+   + cambiaModalità() : void
+}
+
+class automobile extends MezzoDiTrasporto {
+   - modalitàSport : boolean
+   + guidaAutomatica(String destination) : void
+   + cambiaModalità() : void
+}
+@enduml
+
+https://www.plantuml.com/plantuml/uml/ZOunJlH034RxdCBb_lh51QWMGPk6S84lCwF8acSSpJZHieYxS1SkXXFO0WI2zjdwtZisGxKbInS4hL6VpcUzuuUADcirfQUEw8e2LeWmNHCNsycQH0FRwqkFqpkcdIE4rDJ9g2e9nU7_7PR8mvocmeT_VbsLO_VSVLXzwF4MbTB9_E-72X_F6Y6Rz9xRZ9hviyXD0Nbaz9U_RrnOJBEEBEdlkc73NrNJmX4tsngC0mw3LIuJnTICYoCj5_clQKVFMBAy0G00https://www.plantuml.com/plantuml/uml/ZP31JiCm38RlVGeVXn0lm6beN2iXYhYxYLKi9N6Lk6KCyIwy2oz6qfMLJaBi-ls__DdU9iMeWtULSPWIr7Guo3q_HKozH1Luhm1kmE28pZ7S0WUTo4XE3ElNPutx8uQ9ep6K99DMn1663Ayd62mtFNM1DrSv7ONj5FL3wzX0HxexEd8yMtAQ5bmCBn8JFSWhnTMCt7h-jKwfBlkjcjrPStP1zL7D3yZHsmuZq5ufs3yUak_qOj6LCO-https://www.plantuml.com/plantuml/uml/ZP31JiCm38RlVGeVXn0lm6beN2iXYhYxYLKi9N6Lk6KCyIwy2oz6qfMLJaBi-ls__DdU9iMeWtULSPWIr7Guo3q_HKozH1Luhm1kmE28pZ7S0WUTo4XE3ElNPutx8uQ9ep6K99DMn1663Ayd62mtFNM1DrSv7ONj5FL3wzX0HxexEd8yMtAQ5bmCBn8JFSWhnTMCt7h-jKwfBlkjcjrPStP1zL7D3yZHsmuZq5ufs3yUak_qOj6LCO-SUeoUrpTdbq7VCjO_lTFPYmi75IyjExfSrnHyhke6jdXNfg6omKsZaKC7bf9oo4Z2IVxVQbiATl3k6m00
