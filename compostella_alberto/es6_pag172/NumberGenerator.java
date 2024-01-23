@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Random;
+
+
 class NumberGenerator {
     public static ArrayList<Integer> generateNumbers() {
         ArrayList<Integer> numbers = new ArrayList<>();
