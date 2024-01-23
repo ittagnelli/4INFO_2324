@@ -1,0 +1,13 @@
+@startuml
+class StrumentoMusicale{
+  - suono : String
+  + suona() : void
+}
+
+class PianoForte extends StrumentoMusicale{
+  - tipo = corde : static String
+  + getTipo() : String
+}
+@enduml
+
+https://www.plantuml.com/plantuml/uml/TOun2W9134NxEKLAHRo086nb9mXwWJ0Jbi1i8fEC2B9tDovRs6px4jxxWpasxrDDkQ8PtBtrYSJrseqpLleaW2DOLr4u_SuiOw33Wd2t3_XIBcbEg-76A7hHvWJqTfAoANL-AfmXQoiK6dDqpl-9aVmHFqjanNCQGXbxlm00

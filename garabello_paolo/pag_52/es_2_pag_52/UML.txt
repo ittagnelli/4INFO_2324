@@ -1,0 +1,19 @@
+@startuml
+class Compositori {
+   + creaTraccia() : String
+   + creaTesto() : String
+ }
+
+class Musicisti{
+   - traccia : Sring
+   + eseguiMusica() : void
+
+}
+
+class Cantante{
+   - Testo : String
+   + eseguiTesto() : void
+}
+@enduml
+
+https://www.plantuml.com/plantuml/uml/NSz12i9030NG_PmYIqMyWAj2rwxq0Y4D9T0sacJSIEzkdIbC4RBxd_T9vu4MUPuIJUWElSulTGarWKy2W0kGCJuDYGHFPxZ18qoMyP2nXnwJDUtOFRkGU4YHhX1L-JKRmSvZbbAj_bjbI0tfSOdjU3VAMjtw8qhIX3Lrl0pRPry0
