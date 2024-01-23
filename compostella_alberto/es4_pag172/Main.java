@@ -15,7 +15,6 @@ public class Main {
         ArrayList<Integer> numbers = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Inserisci una sequenza di numeri terminanti con uno 0:");
 
         while (true) {
             int num = scanner.nextInt();
