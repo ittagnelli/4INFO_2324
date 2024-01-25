@@ -22,28 +22,25 @@ public class Cifrario {
         Collections.sort(this.alphabet);
     }
 
-    private String code(String str, ArrayList<Character> shifedCharacters) {
+    private String code(String str, int key) {
         Iterator<String> caratteri = new ArrayList<String>(Arrays.asList(str.split(""))).iterator();
         StringBuilder res = new StringBuilder();
 
+        ArrayList<Character> shiftedAlphabet = new ArrayList<Character>(this.alphabet);
+        Collections.rotate(shiftedAlphabet, key);
+
         while (caratteri.hasNext()) {
-            res.append(shifedCharacters.get(this.alphabet.indexOf(caratteri.next().charAt(0))));
+            res.append(shiftedAlphabet.get(this.alphabet.indexOf(caratteri.next().charAt(0))));
         }
         
         return res.toString();
     }
 
     public String decode(String str) {
-        ArrayList<Character> shiftedAlphabet = new ArrayList<Character>(this.alphabet);
-        Collections.rotate(shiftedAlphabet, key);
-
-        return this.code(str, shiftedAlphabet);
+        return this.code(str, this.key);
     }
 
     public String encode(String str) {
-        ArrayList<Character> shiftedAlphabet = new ArrayList<Character>(this.alphabet);
-        Collections.rotate(shiftedAlphabet, -key);
-
-        return this.code(str, shiftedAlphabet);
+        return this.code(str, -this.key);
     }
 }
