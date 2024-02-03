@@ -1,0 +1,23 @@
+@startuml
+
+class Libro {
+ - String autore
+ - String titolo
+ - int numpagine
+ - int ISBN
+ + getAutore() : String
+ + getTitolo() : String
+ + getNumPagine() : int
+ + getISBN() : int
+}
+
+class Biblioteca {
+ - Libro[] libreria
+ + getByAuthor(Sring Author) : Libro[]
+ + esiste(Libro libro) : Boolean
+ + cancellaISBN(int ISBN) : void
+ + ordinaPagine() : void
+}
+@enduml
+
+//www.plantuml.com/plantuml/png/PP31IiH038RlVOeSA-8BU5fx4sGHwaqyPAUX1jA9p6G4aNrtDzbPMVHKykNBpz_PLSDYRPCX2TOAJtme2jy3tC5iXVCAs4mBNG5ZKr47d0rospvmvKmNy3XF-m5kOILxYDFn1kxxRUSlaV2Vxzls75c-yh3EFV8N7OTUTUA3i1ebFFUDwgzl8ASl5SP-F7sTQhnh6UTeVnuyhFkkKULgD0Q9UtLXKXN2x4AYaZ3MVwKOGy6SI0IZxEKXtFXKNbpGid36gn-CnN7OKLxQ9Zy0
