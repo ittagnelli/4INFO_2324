@@ -1,0 +1,54 @@
+class Antenato1 {
+    private String nomeAntenato1;
+
+    public Antenato1(String nomeAntenato1) {
+        this.nomeAntenato1 = nomeAntenato1;
+    }
+
+    public void emettiSuono() {
+        System.out.println("Suono di Antenato1");
+    }
+}
+
+class Antenato2 extends Antenato1 {
+    private int etaAntenato2;
+
+    public Antenato2(String nomeAntenato1, int etaAntenato2) {
+        super(nomeAntenato1);
+        this.etaAntenato2 = etaAntenato2;
+    }
+
+    public void cammina() {
+        System.out.println("Antenato2 sta camminando");
+    }
+}
+
+class Antenato3 extends Antenato2 {
+    public Antenato3(String nomeAntenato1, int etaAntenato2) {
+        super(nomeAntenato1, etaAntenato2);
+    }
+
+    public void mangiaErba() {
+        System.out.println("Antenato3 sta mangiando erba");
+    }
+}
+
+class Mucca extends Antenato3 {
+    public Mucca(String nomeAntenato1, int etaAntenato2) {
+        super(nomeAntenato1, etaAntenato2);
+    }
+
+    public void muggisci() {
+        System.out.println("La mucca sta muggendo");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Mucca mucca = new Mucca("Antenato1", 5);
+        mucca.emettiSuono();
+        mucca.cammina();
+        mucca.mangiaErba();
+        mucca.muggisci();
+    }
+}
