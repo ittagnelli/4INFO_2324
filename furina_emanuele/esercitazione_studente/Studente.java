@@ -17,8 +17,7 @@ public class Studente {
         return matricola;
     }
 
-    // Override di equals e hashCode per permettere il confronto basato sulla matricola
-    @Override
+   @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
