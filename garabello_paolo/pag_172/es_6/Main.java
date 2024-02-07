@@ -17,9 +17,7 @@ public class Main {
     public static Boolean analyze(ArrayList<Integer> list){
         int len = list.size();
         int even = Arrays.stream(list.toArray(new Integer[1])).filter(x -> (x%2) == 0).toArray().length;
-        if(even == (len - even))
-            return true;
-        return false;
+        return even == (len - even);  
     }
 
     public static void main(String[] args) {
