@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 
 public class HashLinkedList {
-    private static int NUM = 10;
+    private static int NUM = 100000;
 
     private LinkedList<Studente>[] table;
 

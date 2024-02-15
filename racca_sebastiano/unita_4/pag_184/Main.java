@@ -5,9 +5,9 @@ public class Main {
         hashList.hash(new Studente(0, "Massimo"));
         hashList.hash(new Studente(1, "Gianni"));
         hashList.hash(new Studente(11, "Giacomo"));
-        hashList.hash(new Studente("Franco"));
-        hashList.hash(new Studente("Luca"));
-        hashList.hash(new Studente("Giorgio"));
+        // hashList.hash(new Studente("Franco"));
+        // hashList.hash(new Studente("Luca"));
+        // hashList.hash(new Studente("Giorgio"));
 
         System.out.println(hashList);
 
