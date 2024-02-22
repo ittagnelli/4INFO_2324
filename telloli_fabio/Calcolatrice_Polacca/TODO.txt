@@ -1,0 +1,6 @@
+(3 + 5) --> 35+ is digit
+(3 + 6) + (4 + 7) --> 36+47++
+
+calcolatrice in notazione polacca inversa
+
+scandisci stringa --> metti i simboli nello stack e i numeri nella stringa
