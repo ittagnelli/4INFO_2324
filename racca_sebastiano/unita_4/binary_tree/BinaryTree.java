@@ -1,6 +1,7 @@
 import java.util.Set;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 public class BinaryTree<T extends Comparable<T>> implements Set<T> {
     private BinaryTreeNode<T> root;
@@ -69,6 +70,62 @@ public class BinaryTree<T extends Comparable<T>> implements Set<T> {
         }
 
         return this.addRecursive(value, current.getRight());
+    }
+
+    public void bfs() {
+        LinkedList<BinaryTreeNode<T>> list = new LinkedList<BinaryTreeNode<T>>();
+        list.add(this.root);
+
+        while (!list.isEmpty()) {
+            BinaryTreeNode<T> node = list.removeFirst();
+
+            System.out.println(node.getValue());
+
+            if(node.getLeft() != null) {
+                list.add(node.getLeft());
+            }
+            if(node.getRight() != null) {
+                list.add(node.getRight());
+            }
+
+        }
+
+    }
+
+    public void dfsInOrder() {
+        this.dfsInOrder(this.root);
+    }
+
+    public void dfsInOrder(BinaryTreeNode<T> node) {
+        if(node != null) {
+            this.dfsInOrder(node.getLeft());
+            System.out.print(node.getValue() + " ");
+            this.dfsInOrder(node.getRight());
+        }
+    }
+
+    public void dfsPreOrder() {
+        this.dfsPreOrder(this.root);
+    }
+
+    public void dfsPreOrder(BinaryTreeNode<T> node) {
+        if(node != null) {
+            System.out.print(node.getValue() + " ");
+            this.dfsPreOrder(node.getLeft());
+            this.dfsPreOrder(node.getRight());
+        }
+    }
+
+    public void dfsPostOrder() {
+        this.dfsPostOrder(this.root);
+    }
+
+    public void dfsPostOrder(BinaryTreeNode<T> node) {
+        if(node != null) {
+            this.dfsPostOrder(node.getLeft());
+            this.dfsPostOrder(node.getRight());
+            System.out.print(node.getValue() + " ");
+        }
     }
     
     @Override
