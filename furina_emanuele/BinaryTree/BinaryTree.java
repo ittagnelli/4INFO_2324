@@ -108,4 +108,17 @@ public class BinaryTree {
         BtsPreOrderRecursive(node.right);
         System.out.println(node.value);
     }
+
+    public boolean BtsSearch(Node node, int val){
+        if (node == null) {
+            return false;   
+        }
+        if (BtsSearch(node.left, val)) {
+            return true;
+        }
+        if (node.value == val) {
+            return true;
+        }
+        return BtsSearch(node.right, val);
+    }
 }
