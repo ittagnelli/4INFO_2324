@@ -61,4 +61,20 @@ public class Tree {
             System.out.println(nodo);
         }
     }
+
+    public boolean find(int dato) {
+        return findRecorisive(dato, root);
+    }
+
+    private boolean findRecorisive(int dato, Node nodo) {
+        if(nodo != null) {
+            if(dato < nodo.val) {
+                return findRecorisive(dato, nodo.left);
+            } else if (dato > nodo.val) {
+                return findRecorisive(dato, nodo.right);
+            } else return true;
+        }
+
+       return false;
+    }
 }
