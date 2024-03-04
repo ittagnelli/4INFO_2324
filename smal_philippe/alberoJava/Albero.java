@@ -9,8 +9,8 @@ public class Albero {
 
     private Nodo addRecorsive(int value, Nodo nodino) {
         if(nodino == null) return new Nodo(value);
-        if(nodino.value > value) nodino.dx  = addRecorsive(value, nodino.dx);
-        if(nodino.value < value) nodino.sx =  addRecorsive(value, nodino.sx);
+        if(value < nodino.value) nodino.sx = addRecorsive(value, nodino.sx);
+        else if(value > nodino.value) nodino.dx = addRecorsive(value, nodino.dx);
         return nodino;
     }
 
@@ -31,5 +31,55 @@ public class Albero {
         }
 
         return msg;
+    }
+
+    public void visualizzaInOrder() {
+        visualizzaInOrderRecorsive(root);
+    }
+
+    private void visualizzaInOrderRecorsive(Nodo nodino) {
+        if(nodino != null) {
+            visualizzaInOrderRecorsive(nodino.sx);
+            System.out.print(nodino.value + " - ");
+            visualizzaInOrderRecorsive(nodino.dx);
+        }
+        
+    }
+
+    public void visualizzaPreOrder() {
+        visualizzaPreOrderRecorsive(root);
+    }
+
+    private void visualizzaPreOrderRecorsive(Nodo nodino) {
+        if(nodino != null) {
+            System.out.print(nodino.value + " - ");
+            visualizzaPreOrderRecorsive(nodino.sx);
+            visualizzaPreOrderRecorsive(nodino.dx);
+        }
+    }
+
+    public void visualizzaPostOrder() {
+        visualizzaPostOrderRecorsive(root);
+    }
+
+    private void visualizzaPostOrderRecorsive(Nodo nodino) {
+        if(nodino != null) {
+            visualizzaPostOrderRecorsive(nodino.sx);
+            visualizzaPostOrderRecorsive(nodino.dx);
+            System.out.print(nodino.value + " - ");
+        }
+    }
+
+    public boolean find(int value) {
+        return findRecorsive(value, root);
+    }
+
+    private boolean findRecorsive(int value, Nodo nodino) {
+        if(nodino != null){
+            if(value < nodino.value) return findRecorsive(value, nodino.sx);
+            else if(value > nodino.value) return findRecorsive(value, nodino.dx);
+            else return true;
+        }
+        return false;
     }
 }
