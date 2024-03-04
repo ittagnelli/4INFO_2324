@@ -11,15 +11,18 @@ public class Main {
 
         LinkedList<Integer> listaPari = new LinkedList<>();
 
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) % 2 == 0) {
-                listaPari.add(list.remove(i));
-                i--;
-            }
-        }
+        list.removeIf(x -> addIfEven(x, listaPari));
 
         System.out.println("LinkedList principale dopo la rimozione degli elementi pari: " + list);
         System.out.println("LinkedList degli elementi pari: " + listaPari);
+    }
+
+    private static boolean addIfEven(int num, LinkedList<Integer> list) {
+        if(num % 2 == 0) {
+            list.add(num);
+            return true;
+        }
+        return false;
     }
 
     private static void fill(LinkedList<Integer> list) {
