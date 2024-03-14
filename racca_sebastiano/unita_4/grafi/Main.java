@@ -17,6 +17,7 @@ public class Main {
         grafo.addArco("C", "D");
         grafo.addArco("C", "E");
 
-        grafo.print();
+        // grafo.print();
+        grafo.bfs("A");
     }
 }
