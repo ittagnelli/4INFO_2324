@@ -18,6 +18,6 @@ public class Main {
         grafo.addArco("C", "E");
 
         // grafo.print();
-        grafo.bfs("A");
+        grafo.dfs("A");
     }
 }
