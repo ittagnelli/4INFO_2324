@@ -74,7 +74,8 @@
         	if (request.getParameter("ritornaHome") != null) {
         		response.sendRedirect("homeDocente.jsp");
         	} 
-        	if(request.getParameter("mettiVoto") != null) {
+        	if((request.getParameter("mettiVoto") != null) && (request.getParameter("inputVoto") != null) && 
+        			(request.getParameter("inputMateria") != null) && (request.getParameter("inputStudente") != null)) {
         		WriterVoto wf = new WriterVoto(request.getServletContext().getRealPath("/infoTXT") + PathNAME.PATH_VOTI, true);
         		Studente studente = classe.getClasse().get(Integer.valueOf(request.getParameter("inputStudente")));
         		System.out.println(studente.getIndexStudente());
