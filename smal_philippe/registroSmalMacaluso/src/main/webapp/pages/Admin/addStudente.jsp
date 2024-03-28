@@ -47,7 +47,9 @@
             </div>
         </form>
         <% 
-        	if (request.getParameter("addNewStudente") != null) {
+        	if ((request.getParameter("addNewStudente") != null) && (request.getParameter("inputSezione") != null) && 
+        			(request.getParameter("inputClasse") != null) && (request.getParameter("inputNome") != null) &&
+        			(request.getParameter("inputCognome") != null) && (request.getParameter("inputPass") != null)) {
         		Writer wfStrudente = new Writer(request.getServletContext().getRealPath("/infoTXT") + PathNAME.PATH_STUDENTI, true);
         		Writer wfVoto = new Writer(request.getServletContext().getRealPath("/infoTXT") + PathNAME.PATH_VOTI, true);
         		Studente studente = new Studente(request.getParameter("inputNome"),
