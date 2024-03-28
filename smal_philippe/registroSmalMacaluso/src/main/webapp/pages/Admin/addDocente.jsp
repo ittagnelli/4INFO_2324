@@ -35,7 +35,9 @@ Es: italiano, storia, ..." class="input-text materie-inserimento" name="inputMat
         </form>
         
         <% 
-        	if (request.getParameter("addNewDocente") != null) {
+        	if ((request.getParameter("addNewDocente") != null) && (request.getParameter("inputMaterie") != null) && 
+        			(request.getParameter("inputNome") != null) && (request.getParameter("inputCognome") != null) && 
+        			(request.getParameter("inputPass") != null)) {
         		Writer wfDocente = new Writer(request.getServletContext().getRealPath("/infoTXT") + PathNAME.PATH_INSEGNANTI, true);
         		Docente docente = new Docente(request.getParameter("inputNome"),
         									request.getParameter("inputCognome"),
