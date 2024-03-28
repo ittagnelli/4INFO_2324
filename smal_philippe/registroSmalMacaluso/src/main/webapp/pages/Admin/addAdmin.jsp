@@ -33,7 +33,8 @@
         </form>
         
         <% 
-        	if (request.getParameter("addNewAdmin") != null) {
+        	if ((request.getParameter("addNewAdmin") != null) && (request.getParameter("inputNome") != null) &&
+        			(request.getParameter("inputCognome") != null) && (request.getParameter("inputPass") != null)) {
         		Writer wfAdmin = new Writer(request.getServletContext().getRealPath("/infoTXT") + PathNAME.PATH_ADMIN, true);
         		User newAdmin = new User(request.getParameter("inputNome"), request.getParameter("inputCognome"), request.getParameter("inputPass"));
         		System.out.println(newAdmin);
