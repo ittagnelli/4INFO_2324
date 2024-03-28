@@ -60,20 +60,13 @@
             </div>
         </form>
         <% 
-        	if (request.getParameter("ritornaHome") != null) {
-        		response.sendRedirect("homeDocente.jsp");
-        	} 
-        	if(request.getParameter("mettiVoto") != null) {
-        		WriterVoto wf = new WriterVoto(request.getServletContext().getRealPath("/infoTXT") + PathNAME.PATH_VOTI, true);
-        		Studente studente = classe.getClasse().get(Integer.valueOf(request.getParameter("inputStudente")));
-        		System.out.println(studente.getIndexStudente());
-        		wf.addVoto(studente.getIndexStudente(), 
-        					new Voto(request.getParameter("inputMateria") + "-" + request.getParameter("inputVoto")));
-        		wf.closeFile();
-      			%>
-      			<script type="text/javascript">alert("Voto aggiunto con successo!")</script>
-      			<%
+        	if ((request.getParameter("inserisciVoto") != null) &&  (request.getParameter("inputSezione") != null)) {
+        		session.setAttribute("classeTake", request.getParameter("inputSezione"));
+        		response.sendRedirect("votoDocente.jsp");
         	}
+	    	if (request.getParameter("ritornaHome") != null) {
+	    		response.sendRedirect("../../index.jsp");
+	    	} 
         %>
         
     </body>
