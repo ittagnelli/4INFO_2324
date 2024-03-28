@@ -81,6 +81,9 @@
         		wf.addVoto(studente.getIndexStudente(), 
         					new Voto(request.getParameter("inputMateria") + "-" + request.getParameter("inputVoto")));
         		wf.closeFile();
+      			%>
+      			<script type="text/javascript">alert("Voto aggiunto con successo!")</script>
+      			<%
         	}
         %>
         
