@@ -32,7 +32,7 @@
                 </div>
                 <div class="input-inserimento-classe">
                     <h3 id="nome_docente">Inserimento voto</h3>
-                    <select class="drop-down-menu" name="inputStudente">
+                    <select class="drop-down-menu" name="inputStudente" required>
                     	<option value="" disabled selected hidden>Studente</option>
                         <%
                         int contatore = 0;
@@ -43,7 +43,7 @@
                         }
                         %>
                     </select>
-                    <select class="drop-down-menu" name="inputMateria">
+                    <select class="drop-down-menu" name="inputMateria" required>
                         <option value="" disabled selected hidden>Materia</option>
                         <%
                         for(String materie : docente.getMaterie()) {
@@ -53,7 +53,7 @@
                         }
                         %>
                     </select>
-                    <select class="drop-down-menu" name="inputVoto">
+                    <select class="drop-down-menu" name="inputVoto" required>
                         <option value="" disabled selected hidden>Inserire il voto</option>
                     <%for(float i = 2; i <= 10; i += .5) { 
                     %>
