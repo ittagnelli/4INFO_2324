@@ -15,13 +15,13 @@
                 <div class="input-text">
                     <img class="img-input" src="/registroSmalMacaluso/imgs/username_logo.png">
                     <label for="username" id="text-card">Username: </label>
-                    <input type="text" id="input-username" name="username" >
+                    <input type="text" id="input-username" name="username" required>
                     <img class="img-input" src="/registroSmalMacaluso/imgs/password_logo.png">
                     <label for="pass" id="text-card">Password: </label>
-                    <input type="password" id="input-username" name="pass" >
+                    <input type="password" id="input-username" name="pass" required>
                 </div>
 
-                <select class="drop-down-user" name="userType">
+                <select class="drop-down-user" name="userType" required>
                     <option value="3" disabled selected hidden>Tipo di user</option>
                     <option value="0">Admin</option>
                     <option value="1">Docente</option>
