@@ -29,7 +29,7 @@
                 </div>
                 <div class="input-inserimento-classe">
                     <h3 id="nome_docente">Voto</h3>
-                    <select class="drop-down-menu" name="inputSezione">
+                    <select class="drop-down-menu" name="inputSezione" required>
                         <option value="" disabled selected hidden>Classe</option>
                         <option value="1 Informatica">1 Informatica</option>
                         <option value="2 Informatica">2 Informatica</option>
