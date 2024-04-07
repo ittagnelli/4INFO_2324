@@ -21,9 +21,9 @@
 
                 <div class="input-inserimento-classe">
                     <h3 id="nome_docente">Add admin</h3>
-                    <input type="text" placeholder="Inserisci nome" class="input-text" name="inputNome" >
-                    <input type="text" placeholder="Inserisci cognome" class="input-text" name="inputCognome" >
-                    <input type="password" placeholder="Inserisci password" class="input-text" name="inputPass" >
+                    <input type="text" placeholder="Inserisci nome" class="input-text" name="inputNome" required>
+                    <input type="text" placeholder="Inserisci cognome" class="input-text" name="inputCognome" required>
+                    <input type="password" placeholder="Inserisci password" class="input-text" name="inputPass" required>
                     <div class="scelta">
                         <button class="buttom-scelta" name="ritornaHome">Home</button>
                         <button class="buttom-scelta" name="addNewAdmin"><img class="img-input" src="/registroSmalMacaluso/imgs/add_logo.png"></button>
