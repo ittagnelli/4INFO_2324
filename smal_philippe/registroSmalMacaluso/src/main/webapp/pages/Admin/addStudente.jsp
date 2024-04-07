@@ -21,10 +21,10 @@
 
                 <div class="input-inserimento-classe">
                     <h3 id="nome_docente">Add studente</h3>
-                    <input type="text" placeholder="Inserisci nome" class="input-text" name="inputNome" >
-                    <input type="text" placeholder="Inserisci cognome" class="input-text" name="inputCognome" >
-                    <input type="password" placeholder="Inserisci password" class="input-text" name="inputPass" >
-                    <select class="drop-down-menu" name="inputClasse">
+                    <input type="text" placeholder="Inserisci nome" class="input-text" name="inputNome" required>
+                    <input type="text" placeholder="Inserisci cognome" class="input-text" name="inputCognome" required>
+                    <input type="password" placeholder="Inserisci password" class="input-text" name="inputPass" required>
+                    <select class="drop-down-menu" name="inputClasse" required>
                         <option value="" disabled selected hidden>Inserire la classe</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -32,7 +32,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                    <select class="drop-down-menu" name="inputSezione">
+                    <select class="drop-down-menu" name="inputSezione" required>
                         <option value="" disabled selected hidden>Inserire la sezione</option>
                         <option value="Informatica">Informatica</option>
                         <option value="Energia">Energia</option>
