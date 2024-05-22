@@ -1,6 +1,4 @@
-import java.util.LinkedList;
-import java.util.Scanner;
-import java.util.Iterator;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,17 +17,10 @@ public class Main {
 
         } while(num != 0);
 
-
-        Iterator<Integer> iterator = list.iterator();
         System.out.print("Inserisci il divisore: ");
         int divisore = scanner.nextInt();
 
-        while (iterator.hasNext()) {
-            int currentElement = iterator.next();
-            if (currentElement % divisore == 0) {
-                iterator.remove();
-            }
-        }
+        list.removeIf(x -> x % divisore == 0);
 
         System.out.println(list);
 
