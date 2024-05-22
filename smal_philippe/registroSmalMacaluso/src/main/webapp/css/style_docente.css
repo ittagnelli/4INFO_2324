@@ -1,0 +1,107 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Work+Sans&display=swap');
+
+*, html {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gabarito', sans-serif;
+}
+
+body{
+    background-color: #f7f7f2;
+    transition: .7s;
+}
+
+
+.card {
+    color: white;
+    width: 40%;
+    max-width: 900px; 
+    height: auto; 
+    min-height: 300px;
+    border: 1px solid black;
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 60px auto 0;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-columns: 100%;
+}
+
+.card #title-card{
+    text-align: center;
+    font-size: 40px;
+}
+
+.user-card {
+    margin: 40px auto 0;
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+}
+
+.user-card .info-div {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 90%;
+}
+
+.info-div #nome_docente {
+    font-size: 20px;
+    color: white;     
+}
+
+.info-div ul, li{
+    font-size: 12px;
+    color: white;
+}
+
+.user-card .input-inserimento-classe {
+    background-color: rgb(92, 92, 92);
+    border-radius: 8px;
+    padding: 10px;
+    width: 90%;
+    height: 70%;
+    display: grid;
+    grid-template-rows: 15% 40% 40%; 
+    grid-template-columns: 100%;
+}
+
+.input-inserimento-classe .scelta{
+    display: grid;
+    grid-template-rows: 100%; 
+    grid-template-columns: 50% 50%;
+}
+.scelta .buttom-scelta{
+    margin: 20px auto 0;
+    width: 80%;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+
+.buttom-scelta:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+.input-inserimento-classe .drop-down-menu {
+    border-style: solid;
+    border-color: black;
+    margin: 10px auto 0;
+    font-size: 12px;
+    color: black; 
+    background-color: white;   
+    border-radius: 8px;
+    width: 150px;
+	cursor: pointer;
+}
