@@ -1,6 +1,6 @@
-[submodule "racca_sebastiano/jck"]
-	path = racca_sebastiano/jck
-	url = https://github.com/Paolo-Garabello/jck.git
 [submodule "garabello_paolo/jck"]
 	path = garabello_paolo/jck
+	url = https://github.com/Paolo-Garabello/jck.git
+[submodule "racca_sebastiano/java/jck"]
+	path = racca_sebastiano/java/jck
 	url = https://github.com/Paolo-Garabello/jck.git
